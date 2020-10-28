@@ -10,6 +10,23 @@
 <script src="https://unpkg.com/react@15/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
 
+<script src="IShop.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script>
+    var shop = 'Электросила';
+var goods = [
+    {name:'телефон',price:'300',url:'https://media.4rgos.it/i/Argos/8793546_R_Z001A?w=750&h=440&qlt=70',balance:'5'},
+    {name:'ноутбук',price:'800',url:'https://avatars.mds.yandex.net/get-mpic/2017291/img_id709178782484680375.jpeg/orig',balance:'9'},
+    {name:'приставка',price:'500',url:'https://shop.by/images/sony_playstation_4_slim_500gb_fifa_19_1.jpg',balance:'3'},
+    {name:'наушники',price:'80',url:'https://www.sony.ru/image/8f499d4640b363762e66edd1a4916a10?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF',balance:'8'}
+];
+
+    ReactDOM.render(
+    React.createElement(IShop),
+        document.getElementById('container')
+    );
+</script>
 
 </body>
 </html>
