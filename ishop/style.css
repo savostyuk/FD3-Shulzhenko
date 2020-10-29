@@ -13,6 +13,8 @@
     width: 100%;
 }
 .IShop .GoodsShop,
+.IShop .GoodsShop .Headings,
+.IShop .GoodsShop .Headings .HeadingsItem,
 .IShop .GoodsShop .Item,
 .IShop .GoodsShop .Item .Name,
 .IShop .GoodsShop .Item .Price,
@@ -22,6 +24,7 @@
     border-collapse: collapse;
     padding: 5px;
 }
+.IShop .GoodsShop .Headings .HeadingsItem,
 .IShop .GoodsShop .Item .Name,
 .IShop .GoodsShop .Item .Price,
 .IShop .GoodsShop .Item .Url,
@@ -30,4 +33,9 @@
 }
 .IShop .GoodsShop .Item .Name{
     font-weight: bold;
+    font-style: italic;
+}
+.IShop .GoodsShop .Headings .HeadingsItem{
+    font-weight: bold;
+    font-size: 1.5em;
 }
