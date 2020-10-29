@@ -17,9 +17,9 @@ render: function (){
         if (headings[z] === "code") headings.splice(z, 1); //убираем лишние элементы-пустые строки
     }
 
-    var headingsCode = headings.map(function (k){
-        return React.DOM.td ({key:k,className: 'HeadingsItem' }, k)
-    })
+    var headingsCode = headings.map( k =>
+         React.DOM.td ({key:k,className: 'HeadingsItem' }, k)
+    );
 
             var goodsCode = this.props.goods.map( v =>
             React.DOM.tr ({key:v.code, className: 'Item'},
