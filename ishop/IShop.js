@@ -24,7 +24,8 @@ render: function (){
 
     return React.DOM.div( {className:'IShop'},
                React.DOM.div( {className:'Shop'}, this.props.shop ),
-               React.DOM.table ( {className:'GoodsShop'}, goodsCode),
+               React.DOM.table ( {className:'GoodsShop'},
+                   React.DOM.tbody({}, goodsCode)),
     );
 
 },
