@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="648abaac-ea89-4695-a2b1-851ae36e8ce8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/IShop.js" afterDir="false" />
-    </list>
+    <list default="true" id="648abaac-ea89-4695-a2b1-851ae36e8ce8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603907715223</updated>
       <workItem from="1603907716268" duration="3449000" />
-      <workItem from="1603950054479" duration="7962000" />
+      <workItem from="1603950054479" duration="8486000" />
     </task>
     <task id="LOCAL-00001" summary="create .css and .js">
       <created>1603910217496</created>
@@ -81,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603954693355</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ADD tag tbody">
+      <created>1603959882241</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603959882241</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -89,21 +93,22 @@
     <MESSAGE value="update files" />
     <MESSAGE value="create component, add styles" />
     <MESSAGE value="add atr href, change color" />
-    <option name="LAST_COMMIT_MESSAGE" value="add atr href, change color" />
+    <MESSAGE value="ADD tag tbody" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD tag tbody" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1603954692830">
+    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1603959881621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603954692830" />
+    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603959881621" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603907792118">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603907792118" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603954695333">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603959885028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603954695333" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603959885028" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603958040074">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
