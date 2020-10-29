@@ -17,7 +17,7 @@ render: function (){
                 React.DOM.td ({className:'Name'}, v.name),
                 React.DOM.td ({className:'Price'}, v.price),
                 React.DOM.td ({className:'Url'},
-                    React.DOM.a ({className:'Img'},  v.url),),
+                    React.DOM.a ({className:'Img', href:v.url},  v.url),),
                 React.DOM.td ({className:'Balance'}, v.balance),
             )
         );
