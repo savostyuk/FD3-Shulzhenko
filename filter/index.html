@@ -5,6 +5,22 @@
     <title>Фильтр</title>
 </head>
 <body>
+<div id="container"></div>
+
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+<script src="FilterBlock.js"></script>
+<link rel="stylesheet" type="text/css" href="FilterBlock.css">
+
+<script>
+
+    var wordsArray = ['весна', 'волна', 'улица', 'лист', 'дерево', 'кукла', 'мяч', 'игрушка', 'пузыри', 'мелки'];
+    ReactDOM.render(
+        React.createElement(FilterBlock, {words: wordsArray}),
+        document.getElementById('container')
+    );
+</script>
 
 </body>
 </html>
