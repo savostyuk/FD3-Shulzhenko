@@ -1,6 +1,13 @@
 .Filter_Block .Filter_Select {
     position: absolute;
-    top: 3em;
+    top: 40px;
     left: 10px;
     width: 250px;
+}
+.Filter_Block .Filter_Checkbox, .Filter_Block .Filter_Input {
+    margin-right: 5px;
+}
+
+.Filter_Block .Filter_Checkbox{
+    vertical-align: middle;
 }

@@ -43,7 +43,7 @@ var FilterBlock = React.createClass({
     render: function (){
         var OptionList = [];
         this.state.processingWords.forEach(function (v){
-            var option = React.DOM.option ({multiple:true, classList: 'Filter_Option'},v)
+            var option = React.DOM.option ({classList: 'Filter_Option'},v)
             OptionList.push(option);
         });
 
