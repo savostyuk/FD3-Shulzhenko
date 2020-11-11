@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"  />
+    <title>Интернет-магазин</title>
+</head>
+<body>
+<div id="container"></div>
+
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+<script src="shop.js"></script>
+<link rel="stylesheet" type="text/css" href="shop.css" />
+
+<script src="product.js"></script>
+<link rel="stylesheet" type="text/css" href="product.css" />
+
+<script>
+    var shopName = 'Электросила';
+    var shopGoods = [
+        {code:1,name:'Телефон',price:'300$',url:'https://media.4rgos.it/i/Argos/8793546_R_Z001A?w=750&h=440&qlt=70',balance:'5ед'},
+        {code:2,name:'Ноутбук',price:'800$',url:'https://avatars.mds.yandex.net/get-mpic/2017291/img_id709178782484680375.jpeg/orig',balance:'9ед'},
+        {code:3,name:'Приставка',price:'500$',url:'https://shop.by/images/sony_playstation_4_slim_500gb_fifa_19_1.jpg',balance:'3ед'},
+        {code:4,name:'Наушники',price:'80$',url:'https://www.sony.ru/image/8f499d4640b363762e66edd1a4916a10?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF',balance:'8ед'}
+    ];
+
+    ReactDOM.render(
+        React.createElement(IShop, {shop:shopName, goods:shopGoods}),
+        document.getElementById('container')
+    );
+</script>
+
+</body>
+</html>

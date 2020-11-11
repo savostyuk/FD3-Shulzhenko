@@ -1,0 +1,3 @@
+var Product = React.createClass ({
+
+})
