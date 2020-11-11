@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="648abaac-ea89-4695-a2b1-851ae36e8ce8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/IShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/IShop.js" afterDir="false" />
-    </list>
+    <list default="true" id="648abaac-ea89-4695-a2b1-851ae36e8ce8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +29,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../FD3-React-V5/A_start" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../IT-Academy/TENNIS_DOM" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,7 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603907715223</updated>
       <workItem from="1603907716268" duration="3449000" />
-      <workItem from="1603950054479" duration="13363000" />
+      <workItem from="1603950054479" duration="13713000" />
     </task>
     <task id="LOCAL-00001" summary="create .css and .js">
       <created>1603910217496</created>
@@ -101,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603964954102</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change to arrow function">
+      <created>1603965181147</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603965181147</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -112,21 +117,22 @@
     <MESSAGE value="ADD tag tbody" />
     <MESSAGE value="change table style" />
     <MESSAGE value="add tr Headings, change style" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tr Headings, change style" />
+    <MESSAGE value="change to arrow function" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to arrow function" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1603964953452">
+    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1603965180503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603964953452" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603907792118">
+    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603965180503" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603965462803">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603907792118" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603964957052">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603965462803" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603965183396">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603964957052" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603965183396" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603958040074">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
