@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './shop.css';
 import Product from "./product";
 import CardEditor from "./cardeditor";
+import CardView from "./cardview";
 
 class Shop extends React.Component {
 
@@ -22,14 +23,14 @@ class Shop extends React.Component {
 };
 
 selectItem =(code) => {
-    this.setState ({selectedItemCode: code });
+    this.setState ({cardMode: 1, selectedItemCode: code });
 };
 
 //callback для cardeditor
 cbSave = (newItem) => {
-        this.state.goods = this.state.goods.map(item =>
+        var newGoods = this.state.goods.map(item =>
             item.code = newItem.code?newItem:item)
-    this.setState({cardMode: 0, goods: this.state.goods})
+    this.setState({cardMode: 0, goods: newGoods})
     }
 
 changeItem = (code) => {
@@ -47,7 +48,6 @@ deleteItem = (code) => {
 
 render(){
     var item = this.state.goods.find((v => v.code===this.state.selectedItemCode));
-    console.log(item);
 
     var headings = Object.keys(this.props.goods[0]);
     for (var z = 0; z < headings.length; z++){
