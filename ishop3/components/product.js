@@ -8,20 +8,26 @@ class Product extends React.Component{
     static propTypes: {
         code: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
         url: PropTypes.string.isRequired,
-        balance: PropTypes.string.isRequired,
+        balance: PropTypes.number.isRequired,
         classNameItem: PropTypes.string.isRequired,
         cbSelectItem: PropTypes.func.isRequired,
         cbDeleteItem: PropTypes.func.isRequired,
+        cdEditItem: PropTypes.func.isRequired,
     };
 
     highlightItem = (EO) =>{
         this.props.cbSelectItem ( this.props.code);
     };
 
+    editItem = (EO) =>{
+        EO.stopPropagation();      // останавливаем всплытие React события
+       this.props.cdEditItem (this.props.code);
+    };
+
     delItem = (EO) =>{
-        EO.stopPropagation();
+        EO.stopPropagation();       // останавливаем всплытие React события
         this.props.cbDeleteItem ( this.props.code);
     };
 
@@ -35,6 +41,7 @@ class Product extends React.Component{
             </td>
             <td className='Balance'>{this.props.balance}</td>
             <td className='Control'>
+                <input type='button' value='Edit' onClick={this.editItem}/>
                <input type='button' value='Delete' onClick={this.delItem}/>
             </td>
         </tr>
