@@ -7,8 +7,8 @@ class CardEditor extends React.Component{
 
     static PropTypes: {
         item: PropTypes.object.isRequired,
-        cbSave: PropTypes.func.isRequired,
-        cbCancelChanges: PropTypes.isRequired,
+        cbSaveChanges: PropTypes.func.isRequired,
+        cbCancelChanges: PropTypes.func.isRequired,
     }
 
     state={
@@ -35,27 +35,33 @@ class CardEditor extends React.Component{
     }
 
     validField =(EO, bool) =>{
+        var val = this.state.item;
         switch (EO.target.name) {
             case 'itemName':
-                this.setState({name: EO.target.value, nameIsValid: bool, valueIsInValid: !bool});
+            {this.state.item.name = EO.target.value;
+                this.setState({nameIsValid: bool, valueIsInValid: !bool});}
                 break;
             case 'itemPrice':
-                this.setState({price: EO.target.value, priceIsValid: bool, valueIsInValid: !bool});
+            {this.state.item.price = EO.target.value;
+                this.setState({priceIsValid: bool, valueIsInValid: !bool});}
                 break;
             case 'itemURL':
-                this.setState({url: EO.target.value, urlIsValid: bool, valueIsInValid: !bool});
+                {this.state.item.url = EO.target.value;
+                this.setState({urlIsValid: bool, valueIsInValid: !bool});}
                 break;
             case 'itemBalance':
-                this.setState({balance: EO.target.value, balanceIsValid: bool, valueIsInValid: !bool});
+                    {this.state.item.balance = EO.target.value;
+                this.setState({balanceIsValid: bool, valueIsInValid: !bool});}
                 break;
         }
     }
 
     saveChanges = () =>{
-        this.props.cbSave (this.state.item)
+        this.props.cbSaveChanges (this.state.item)
     }
+
     cancelChanges =() =>{
-        this.props.cbCancelChanges()
+        this.props.cbCancelChanges(this.state.item)
     }
 
     render() {

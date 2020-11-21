@@ -22,15 +22,19 @@ class Shop extends React.Component {
 
 };
 
-selectItem =(code) => {
-    this.setState ({cardMode: 1, selectedItemCode: code });
-};
+    selectItem =(code) => {
+     this.setState ({cardMode: 1, selectedItemCode: code });
+    };
 
 //callback для cardeditor
-cbSave = (newItem) => {
+    cbSave = (newItem) => {
         var newGoods = this.state.goods.map(item =>
             item.code = newItem.code?newItem:item)
     this.setState({cardMode: 0, goods: newGoods})
+    }
+
+    cbCancel = (item) =>{
+        this.setState({cardMode: 0, goods: this.state.goods})
     }
 
 changeItem = (code) => {
@@ -81,7 +85,7 @@ render(){
             </tbody>
         </table>
         {this.state.cardMode ===1 && <CardView item={item}/>}
-        {this.state.cardMode ===2 && <CardEditor item={item} cbSave={this.cbSave}/>}
+        {this.state.cardMode ===2 && <CardEditor item={item} cbSaveChanges={this.cbSave} cbCancelChanges={this.cbCancel}/>}
     </div>
 };
 }
