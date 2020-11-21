@@ -1,0 +1,29 @@
+.IShop{
+    background-color: #b7f6e3;
+    padding: 10px;
+}
+
+.IShop .Shop{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.IShop .GoodsShop{
+    width: 100%;
+}
+.IShop .GoodsShop,
+.IShop .GoodsShop .Headings,
+.IShop .GoodsShop .Headings .HeadingsItem {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.IShop .GoodsShop .Headings .HeadingsItem{
+    text-align: center;
+}
+
+.IShop .GoodsShop .Headings .HeadingsItem{
+    font-weight: bold;
+    font-size: 1.5em;
+}

@@ -1,0 +1,31 @@
+.IShop .GoodsShop .Item,
+.IShop .GoodsShop .Item .Name,
+.IShop .GoodsShop .Item .Price,
+.IShop .GoodsShop .Item .Url,
+.IShop .GoodsShop .Item .Balance,
+.IShop .GoodsShop .Item_Select,
+.IShop .GoodsShop .Item_Select .Name,
+.IShop .GoodsShop .Item_Select .Price,
+.IShop .GoodsShop .Item_Select .Url,
+.IShop .GoodsShop .Item_Select .Balance{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.IShop .GoodsShop .Item .Name,
+.IShop .GoodsShop .Item .Price,
+.IShop .GoodsShop .Item .Url,
+.IShop .GoodsShop .Item .Balance,
+.IShop .GoodsShop .Item .Control,
+.IShop .GoodsShop .Item_Select {
+    text-align: center;
+}
+.IShop .GoodsShop .Item_Select .Name,
+.IShop .GoodsShop .Item .Name{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.IShop .GoodsShop .Item_Select{
+    background-color: orange;
+}
