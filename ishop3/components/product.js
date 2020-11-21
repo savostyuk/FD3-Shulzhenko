@@ -31,7 +31,7 @@ class Product extends React.Component{
             <td className='Name'>{this.props.name}</td>
             <td className='Price'>{this.props.price}</td>
             <td className='Url'>
-                <a className="Img" href={this.props.url}>this.props.url></a>
+                <a className="Img" href={this.props.url}>{this.props.url}</a>
             </td>
             <td className='Balance'>{this.props.balance}</td>
             <td className='Control'>

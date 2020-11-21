@@ -55,12 +55,12 @@ render(){
         />
 );
 
-    return <div >
+    return <div className='IShop'>
         <div className='Shop'>{this.props.shop}</div>
         <table className='GoodsShop'>
             <tbody>
-            <tr className='Headings'>{headingsCode}</tr>
-            <td className='HeadingsItem'>{goodsCode}</td>
+            <tr className='Headings'>{headingsCode} <td className='HeadingsItem'>control</td></tr>
+            {goodsCode}
             </tbody>
         </table>
     </div>
