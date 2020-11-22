@@ -18,35 +18,46 @@ class Shop extends React.Component {
     selectedItemCode: 0,
     classNameItemDefault: 'Item',
     classNameItemSelect: 'Item_Select',
-    cardMode: 0,   //0 - no, 1-view, 2 - edit
-
+    cardMode: 0,   //0 - no, 1-view, 2 - edit, 3 - add
+    btnsDisabledDelete: false,
+    blockChange: false,
 };
-
+//при щелчке по строке
     selectItem =(code) => {
-     this.setState ({cardMode: 1, selectedItemCode: code });
+     this.setState ({cardMode: 1, selectedItemCode: code, btnsDisabledDelete: false });
     };
 
 //callback для cardeditor
     cbSave = (newItem) => {
         var newGoods = this.state.goods.map(item =>
             item.code = newItem.code?newItem:item)
-    this.setState({cardMode: 0, goods: newGoods})
+    this.setState({cardMode: 0, goods: newGoods, btnsDisabledDelete: false, blockChange: false })
     }
 
-    cbCancel = (item) =>{
-        this.setState({cardMode: 0, goods: this.state.goods})
+    //при нажатии кнопки Cancel
+    cbCancel = () =>{
+        this.setState({cardMode: 0, btnsDisabledDelete: false, blockChange: false })
     }
 
+    //при нажатии кнопки Edit
 changeItem = (code) => {
-this.setState( {cardMode: 2, selectedItemCode: code });
+this.setState( {cardMode: 2, selectedItemCode: code, btnsDisabledDelete:true});
 }
+    OnChange = () => {
+        this.setState({blockChange: true});
+    }
 
+    addProduct =() => {
+        this.setState( {cardMode: 3, btnsDisabledDelete:true, blockChange: true, selectedItemCode: 0 });
+    }
+
+    //при нажатии кнопки удалить
 deleteItem = (code) => {
     var Question = confirm("Вы хотите удалить товар?");
     if (Question) {
         var filterGoods = this.state.goods.filter (v =>
             v.code !==code);
-        this.setState ({ goods:filterGoods})
+        this.setState ({ goods:filterGoods, cardMode: 0})
     }
 };
 
@@ -70,8 +81,10 @@ render(){
                  url={v.url}
                  balance={v.balance}
                  cbSelectItem={this.selectItem}
-                 cdEditItem={this.changeItem}
+                 cbEditItem={this.changeItem}
                  cbDeleteItem={this.deleteItem}
+                 btnsDisabledDelete = {this.state.btnsDisabledDelete}
+                 blockChange={this.state.blockChange}
                  classNameItem={((this.state.selectedItemCode) === (v.code))?(this.state.classNameItemSelect):(this.state.classNameItemDefault)}
         />
 );
@@ -84,8 +97,18 @@ render(){
             {goodsCode}
             </tbody>
         </table>
+        {(this.state.cardMode === 0||this.state.cardMode === 1) &&  <input type='button' value='New product' onClick={this.addProduct}/>}
         {this.state.cardMode ===1 && <CardView item={item}/>}
-        {this.state.cardMode ===2 && <CardEditor item={item} cbSaveChanges={this.cbSave} cbCancelChanges={this.cbCancel}/>}
+        {this.state.cardMode ===2 && <CardEditor
+            cardMode = {this.state.cardMode}
+            item={item}
+            cbSaveChanges={this.cbSave}
+            cbCancelChanges={this.cbCancel}
+            cbOnChange={this.OnChange}
+        />}
+        {this.state.cardMode ===3 && <CardEditor
+            cardMode = {this.state.cardMode}
+        />}
     </div>
 };
 }

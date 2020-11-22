@@ -9,6 +9,8 @@ class CardEditor extends React.Component{
         item: PropTypes.object.isRequired,
         cbSaveChanges: PropTypes.func.isRequired,
         cbCancelChanges: PropTypes.func.isRequired,
+        cbOnChange: PropTypes.func.isRequired,
+        cardMode: PropTypes.number.isRequired,
     }
 
     state={
@@ -23,10 +25,11 @@ class CardEditor extends React.Component{
         priceIsValid: true,
         urlIsValid: true,
         balanceIsValid: true,
-        valueIsInValid: false,   //для кнопки save
+        valuesAreInValid: false,   //для кнопки save
     }
 
     editField = (EO) => {
+        this.props.cbOnChange();
         if(EO.target.value==='') {
             this.validField(EO, false);
         } else {
@@ -35,23 +38,22 @@ class CardEditor extends React.Component{
     }
 
     validField =(EO, bool) =>{
-        var val = this.state.item;
         switch (EO.target.name) {
             case 'itemName':
             {this.state.item.name = EO.target.value;
-                this.setState({nameIsValid: bool, valueIsInValid: !bool});}
+                this.setState({nameIsValid: bool, valuesAreInValid: !bool});}
                 break;
             case 'itemPrice':
             {this.state.item.price = EO.target.value;
-                this.setState({priceIsValid: bool, valueIsInValid: !bool});}
+                this.setState({priceIsValid: bool, valuesAreInValid: !bool});}
                 break;
             case 'itemURL':
                 {this.state.item.url = EO.target.value;
-                this.setState({urlIsValid: bool, valueIsInValid: !bool});}
+                this.setState({urlIsValid: bool, valuesAreInValid: !bool});}
                 break;
             case 'itemBalance':
                     {this.state.item.balance = EO.target.value;
-                this.setState({balanceIsValid: bool, valueIsInValid: !bool});}
+                this.setState({balanceIsValid: bool, valuesAreInValid: !bool});}
                 break;
         }
     }
@@ -61,38 +63,37 @@ class CardEditor extends React.Component{
     }
 
     cancelChanges =() =>{
-        this.props.cbCancelChanges(this.state.item)
+        this.props.cbCancelChanges(this.props.item)
     }
 
     render() {
-        var head = Object.keys(this.props.item);
-        console.log(head);
         return <div>
-            <h1>Редактировать товар</h1>
-           <div><label>ID: {this.state.item.code}</label></div>
+            { this.props.cardMode ===2 && <h1>Редактировать товар</h1>}
+            { this.props.cardMode ===3 && <h1>Добавить новый товар</h1>}
+            <div><label>ID: {this.props.item.code}</label></div>
             <div>
                 <label>Name: </label>
-                <input name='itemName' defaultValue={this.state.item.name} onChange={this.editField}/>
+                <input name='itemName' value={this.state.item.name} onChange={this.editField}/>
                 {(!this.state.nameIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>Price: </label>
-                <input name='itemPrice' defaultValue={this.state.item.price} onChange={this.editField}/>
+                <input name='itemPrice' value={this.state.item.price} onChange={this.editField}/>
                 {(!this.state.priceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>URL: </label>
-                <input name='itemUrl' defaultValue={this.state.item.url} onChange={this.editField}/>
+                <input name='itemUrl' value={this.state.item.url} onChange={this.editField}/>
                 {(!this.state.urlIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>Balance: </label>
-                <input name='itemBalance' defaultValue={this.state.item.balance} onChange={this.editField}/>
+                <input name='itemBalance' value={this.state.item.balance} onChange={this.editField}/>
                 {(!this.state.balanceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
-                <input type='button' value='Save' onClick={this.saveChanges} disabled={this.state.valueIsInValid}/>
-                <input type='button' value='Cancel' onClick={this.cancelChanges}/>
+                <input type='button' value='Save' onClick={this.saveChanges} disabled={this.state.valuesAreInValid}/>
+                <input type='button' value='Cancel' onClick={this.props.cbCancelChanges}/>
             </div>
         </div>
     }

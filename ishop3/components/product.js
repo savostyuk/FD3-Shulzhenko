@@ -14,16 +14,19 @@ class Product extends React.Component{
         classNameItem: PropTypes.string.isRequired,
         cbSelectItem: PropTypes.func.isRequired,
         cbDeleteItem: PropTypes.func.isRequired,
-        cdEditItem: PropTypes.func.isRequired,
+        cbEditItem: PropTypes.func.isRequired,
+        btnsDisabledDelete: PropTypes.bool.isRequired,
+        blockChange: PropTypes.bool.isRequired,
     };
 
     highlightItem = (EO) =>{
+        if (this.props.blockChange !== true)
         this.props.cbSelectItem ( this.props.code);
     };
 
     editItem = (EO) =>{
         EO.stopPropagation();      // останавливаем всплытие React события
-       this.props.cdEditItem (this.props.code);
+       this.props.cbEditItem (this.props.code);
     };
 
     delItem = (EO) =>{
@@ -41,8 +44,8 @@ class Product extends React.Component{
             </td>
             <td className='Balance'>{this.props.balance}</td>
             <td className='Control'>
-                <input type='button' value='Edit' onClick={this.editItem}/>
-               <input type='button' value='Delete' onClick={this.delItem}/>
+                <input type='button' value='Edit' disabled={this.props.blockChange} onClick={this.editItem}/>
+               <input type='button' value='Delete' disabled={this.props.btnsDisabledDelete}  onClick={this.delItem}/>
             </td>
         </tr>
     };
