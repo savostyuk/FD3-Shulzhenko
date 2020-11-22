@@ -15,7 +15,6 @@ class CardEditor extends React.Component{
         priceIsValid: PropTypes.bool.isRequired,
         urlIsValid: PropTypes.bool.isRequired,
         balanceIsValid: PropTypes.bool.isRequired,
-        valuesAreInValid: PropTypes.bool.isRequired,
     }
 
     state={
@@ -30,52 +29,47 @@ class CardEditor extends React.Component{
         priceIsValid: this.props.priceIsValid,
         urlIsValid: this.props.urlIsValid,
         balanceIsValid: this.props.balanceIsValid,
-        valuesAreInValid: this.props.valuesAreInValid, //для кнопки save
     }
 
     editFieldName = (EO) => {
         this.props.cbOnChange();
-        if(EO.target.value==='') {
-            this.state.item.name = '';
+        this.setState({item: {name: EO.target.value}});
+        if(!(EO.target.value)) {
             this.setState({nameIsValid: false});
         } else {
-            this.state.item.name = EO.target.value;
             this.setState({nameIsValid: true});
         }
     }
     editFieldPrice = (EO) => {
         this.props.cbOnChange();
-        if(EO.target.value==='') {
-            this.state.item.price = '';
+        this.setState({item: {price: EO.target.value}});
+        if(!(EO.target.value)) {
             this.setState({priceIsValid: false});
         } else {
-            this.state.item.price = EO.target.value;
             this.setState({priceIsValid: true});
         }
     }
     editFieldUrl = (EO) => {
         this.props.cbOnChange();
-        if(EO.target.value==='') {
-            this.state.item.url = '';
+        this.setState({item: {url: EO.target.value}});
+        if(!(EO.target.value)) {
             this.setState({urlIsValid: false});
         } else {
-            this.state.item.url = EO.target.value;
             this.setState({urlIsValid: true});
         }
     }
     editFieldBalance = (EO) => {
         this.props.cbOnChange();
-        if(EO.target.value==='') {
-            this.state.item.balance = '';
+        this.setState({item: {balance: EO.target.value}});
+        if(!(EO.target.value)) {
             this.setState({balanceIsValid: false});
         } else {
-            this.state.item.balance = EO.target.value;
             this.setState({balanceIsValid: true});
         }
     }
 
     componentDidUpdate(prevProps) {
-        // Популярный пример (не забудьте сравнить пропсы):
+        // обязательно сравнить пропсы:
         if (this.props.item !== prevProps.item) {
             this.setState({
                 item: {

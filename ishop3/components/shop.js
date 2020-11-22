@@ -113,7 +113,6 @@ render(){
             priceIsValid={true}
             urlIsValid={true}
             balanceIsValid={true}
-            valuesAreInValid={false}
             cbSaveChanges={this.cbSave}
             cbCancelChanges={this.cbCancel}
             cbOnChange={this.OnChange}
@@ -125,7 +124,6 @@ render(){
             priceIsValid={false}
             urlIsValid={false}
             balanceIsValid={false}
-            valuesAreInValid={true}
             cbOnChange={this.OnChange}
             cbSaveChanges={this.cbSave}
             cbCancelChanges={this.cbCancel}
