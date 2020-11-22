@@ -21,6 +21,8 @@ class Shop extends React.Component {
     cardMode: 0,   //0 - no, 1-view, 2 - edit, 3 - add
     btnsDisabledDelete: false,
     blockChange: false,
+        key:this.props.goods.length+1,
+
 };
 //при щелчке по строке
     selectItem =(code) => {
@@ -63,6 +65,11 @@ deleteItem = (code) => {
 
 render(){
     var item = this.state.goods.find((v => v.code===this.state.selectedItemCode));
+    let   addItem = {code: this.state.key,
+        name: '',
+        price: '',
+        url:'',
+        balance:''};
 
     var headings = Object.keys(this.props.goods[0]);
     for (var z = 0; z < headings.length; z++){
@@ -102,12 +109,26 @@ render(){
         {this.state.cardMode ===2 && <CardEditor
             cardMode = {this.state.cardMode}
             item={item}
+            nameIsValid={true}
+            priceIsValid={true}
+            urlIsValid={true}
+            balanceIsValid={true}
+            valuesAreInValid={false}
             cbSaveChanges={this.cbSave}
             cbCancelChanges={this.cbCancel}
             cbOnChange={this.OnChange}
         />}
         {this.state.cardMode ===3 && <CardEditor
             cardMode = {this.state.cardMode}
+            item = {addItem}
+            nameIsValid={false}
+            priceIsValid={false}
+            urlIsValid={false}
+            balanceIsValid={false}
+            valuesAreInValid={true}
+            cbOnChange={this.OnChange}
+            cbSaveChanges={this.cbSave}
+            cbCancelChanges={this.cbCancel}
         />}
     </div>
 };
