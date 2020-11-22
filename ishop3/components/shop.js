@@ -30,7 +30,7 @@ class Shop extends React.Component {
 //callback для cardeditor
     cbSave = (newItem) => {
         var newGoods = this.state.goods.map(item =>
-            item.code = newItem.code?newItem:item)
+            item.code = newItem.code?newItem:item);
     this.setState({cardMode: 0, goods: newGoods, btnsDisabledDelete: false, blockChange: false })
     }
 

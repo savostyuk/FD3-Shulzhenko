@@ -57,6 +57,20 @@ class CardEditor extends React.Component{
                 break;
         }
     }
+    componentDidUpdate(prevProps) {
+        // Популярный пример (не забудьте сравнить пропсы):
+        if (this.props.item !== prevProps.item) {
+            this.setState({
+                item: {
+                    code: this.props.item.code,
+                    name: this.props.item.name,
+                    price: this.props.item.price,
+                    url: this.props.item.url,
+                    balance: this.props.item.balance,
+                }
+            });
+        }
+    }
 
     saveChanges = () =>{
         this.props.cbSaveChanges (this.state.item)
