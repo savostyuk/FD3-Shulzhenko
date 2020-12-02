@@ -42,8 +42,8 @@ class Shop extends React.Component {
     }
 
     //при нажатии кнопки Edit
-changeItem = (code) => {
-this.setState( {cardMode: 2, selectedItemCode: code, btnsDisabledDelete:true});
+    changeItem = (code) => {
+        this.setState( {cardMode: 2, selectedItemCode: code, btnsDisabledDelete:true});
 }
     OnChange = () => {
         this.setState({blockChange: true});
@@ -54,16 +54,16 @@ this.setState( {cardMode: 2, selectedItemCode: code, btnsDisabledDelete:true});
     }
 
     //при нажатии кнопки удалить
-deleteItem = (code) => {
+    deleteItem = (code) => {
     var Question = confirm("Вы хотите удалить товар?");
     if (Question) {
         var filterGoods = this.state.goods.filter (v =>
             v.code !==code);
         this.setState ({ goods:filterGoods, cardMode: 0})
     }
-};
+    };
 
-render(){
+    render(){
     var item = this.state.goods.find((v => v.code===this.state.selectedItemCode));
     let   addItem = {code: this.state.key,
         name: '',
@@ -107,6 +107,7 @@ render(){
         {(this.state.cardMode === 0||this.state.cardMode === 1) &&  <input type='button' value='New product' onClick={this.addProduct}/>}
         {this.state.cardMode ===1 && <CardView item={item}/>}
         {this.state.cardMode ===2 && <CardEditor
+            key = {item.code}
             cardMode = {this.state.cardMode}
             item={item}
             nameIsValid={true}

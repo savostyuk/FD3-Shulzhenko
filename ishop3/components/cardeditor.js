@@ -68,27 +68,12 @@ class CardEditor extends React.Component{
         }
     }
 
-    componentDidUpdate(prevProps) {
-        // обязательно сравнить пропсы:
-        if (this.props.item !== prevProps.item) {
-            this.setState({
-                item: {
-                    code: this.props.item.code,
-                    name: this.props.item.name,
-                    price: this.props.item.price,
-                    url: this.props.item.url,
-                    balance: this.props.item.balance,
-                }
-            })
-        }
-    }
-
     saveChanges = () =>{
-        this.props.cbSaveChanges (this.state.item)
+        this.props.cbSaveChanges (this.state.item);
     }
 
     cancelChanges =() =>{
-        this.props.cbCancelChanges()
+        this.props.cbCancelChanges();
     }
 
     render() {
@@ -98,22 +83,22 @@ class CardEditor extends React.Component{
             <div><label>ID: {this.props.item.code}</label></div>
             <div>
                 <label>Name: </label>
-                <input name='itemName' value={this.state.item.name} onChange={this.editFieldName}/>
+                <input name='itemName' defaultValue={this.state.item.name} onChange={this.editFieldName}/>
                 {(!this.state.nameIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>Price: </label>
-                <input name='itemPrice' value={this.state.item.price} onChange={this.editFieldPrice}/>
+                <input name='itemPrice' defaultValue={this.state.item.price} onChange={this.editFieldPrice}/>
                 {(!this.state.priceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>URL: </label>
-                <input name='itemUrl' value={this.state.item.url} onChange={this.editFieldUrl}/>
+                <input name='itemUrl' defaultValue={this.state.item.url} onChange={this.editFieldUrl}/>
                 {(!this.state.urlIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>Balance: </label>
-                <input name='itemBalance' value={this.state.item.balance} onChange={this.editFieldBalance}/>
+                <input name='itemBalance' defaultValue={this.state.item.balance} onChange={this.editFieldBalance}/>
                 {(!this.state.balanceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
