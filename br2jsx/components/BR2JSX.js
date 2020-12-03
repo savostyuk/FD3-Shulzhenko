@@ -7,7 +7,7 @@ import './BR2JSX.css';
 
 class BR2JSX extends React.Component {
 
-    static Proptypes = {
+    static propTypes = {
         text: PropTypes.string.isRequired,
     };
 
