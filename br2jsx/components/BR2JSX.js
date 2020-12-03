@@ -7,12 +7,12 @@ import './BR2JSX.css';
 
 class BR2JSX extends React.Component {
 
-    static PropTypes = {
+    static Proptypes = {
         text: PropTypes.string.isRequired,
-    }
+    };
 
     render() {
-        let regexp = /<br *\/?>/;
+        let regexp = /<br *\/?>/;  //регулярное выражение для br
         let words = this.props.text.split(regexp);
         let parts = [];
         words.forEach((w,i)=>{

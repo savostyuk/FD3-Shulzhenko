@@ -7,7 +7,7 @@ import './RainbowFrame.css';
 
 class RainbowFrame extends React.Component {
 
-    static Proptypes = {
+    static propTypes = {
         colors: PropTypes.array.isRequired,
     };
 
