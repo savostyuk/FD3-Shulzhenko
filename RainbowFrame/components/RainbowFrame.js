@@ -15,7 +15,7 @@ class RainbowFrame extends React.Component {
         let code = this.props.children;
 
         for (let i = 0; i<this.props.colors.length; i++) {
-           code = <div style={{border:"solid 4px "+this.props.colors[i], padding: "10px"}}>{code}</div>;
+           code = <div style={{border:"solid 5px "+this.props.colors[i], padding: "5px"}}>{code}</div>;
         }
 
         return (
