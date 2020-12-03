@@ -1,4 +1,6 @@
 .RainbowFrame{
     width: 400px;
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
