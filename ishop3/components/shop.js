@@ -21,7 +21,7 @@ class Shop extends React.Component {
     cardMode: 0,   //0 - no, 1-view, 2 - edit, 3 - add
     btnsDisabledDelete: false,
     blockChange: false,
-        key:this.props.goods.length+1,
+        idNext:this.props.goods.length+1,
 
 };
 //при щелчке по строке
@@ -31,9 +31,15 @@ class Shop extends React.Component {
 
 //callback для cardeditor
     cbSave = (newItem) => {
-        var newGoods = this.state.goods.map(item =>
-            item.code = newItem.code?newItem:item);
-    this.setState({cardMode: 0, goods: newGoods, btnsDisabledDelete: false, blockChange: false })
+     if (this.state.cardMode ===2){
+         var newGoods = this.state.goods.map(item =>
+             item.code = newItem.code?newItem:item);
+         this.setState({cardMode: 0, goods: newGoods, btnsDisabledDelete: false, blockChange: false })
+     }
+        if (this.state.cardMode ===3) {
+            this.state.goods.push(newItem);
+            this.setState({cardMode: 0, btnsDisabledDelete: false, blockChange: false})
+        }
     }
 
     //при нажатии кнопки Cancel
@@ -65,7 +71,7 @@ class Shop extends React.Component {
 
     render(){
     var item = this.state.goods.find((v => v.code===this.state.selectedItemCode));
-    let   addItem = {code: this.state.key,
+    var addItem = {code: this.state.idNext,
         name: '',
         price: '',
         url:'',
@@ -119,6 +125,7 @@ class Shop extends React.Component {
             cbOnChange={this.OnChange}
         />}
         {this.state.cardMode ===3 && <CardEditor
+            key = {addItem.code}
             cardMode = {this.state.cardMode}
             item = {addItem}
             nameIsValid={false}

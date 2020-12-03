@@ -69,7 +69,14 @@ class CardEditor extends React.Component{
     }
 
     saveChanges = () =>{
-        this.props.cbSaveChanges (this.state.item);
+        let newItem = {};
+        newItem.code = this.state.item.code;
+        newItem.name = this.state.item.name;
+        newItem.price = this.state.item.price;
+        newItem.url = this.state.item.url;
+        newItem.balance = this.state.item.balance;
+        console.log(newItem);
+        this.props.cbSaveChanges (newItem);
     }
 
     cancelChanges =() =>{

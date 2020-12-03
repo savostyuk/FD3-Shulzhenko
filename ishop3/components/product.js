@@ -36,7 +36,7 @@ class Product extends React.Component{
 
     render(){
 
-        return <tr className={this.props.classNameItem} onClick={this.highlightItem}>
+        return <tr key={this.props.code} className={this.props.classNameItem} onClick={this.highlightItem}>
             <td className='Name'>{this.props.name}</td>
             <td className='Price'>{this.props.price}</td>
             <td className='Url'>
