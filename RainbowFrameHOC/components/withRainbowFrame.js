@@ -1,15 +1,18 @@
 import React from 'react';
+import './RainbowFrame.css';
 
 function withRainbowFrame(colors) {
 
-    for (let i = 0; i<colors.length; i++) {
-    }
     return function(Component) {
-        return props => (
-            <div style={{border:"solid 5px "+colors[0], padding: "5px"}}>
-                <Component {...props} />
-            </div>
-        );
+        return function (props) {
+            let Comp = <Component {...props} />;
+            for (let i = 0; i<colors.length; i++) {
+                Comp = <div style={{border: "solid 5px " + colors[i], padding: "5px"}}>{Comp}</div>
+            }
+          return   <div className="RainbowFrame">
+              {Comp}
+          </div>
+        };
     };
 }
 
