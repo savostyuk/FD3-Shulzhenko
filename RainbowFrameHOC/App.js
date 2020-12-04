@@ -1,17 +1,14 @@
 "use strict";
 
-import React, {Fragment} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-import RainbowFrame from './components/RainbowFrame';
-import {withRainbowFrame} from "./components/withRainbowFrame";
-
-let colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
-let FramedFragment = withRainbowFrame(colors)(Fragment);
+import DoubleButton from './components/DoubleButton';
 
 ReactDOM.render(
-    <FramedFragment>
-        Hello!
-    </FramedFragment>,
+    <DoubleButton
+        caption1="однажды"
+        caption2="пору"
+        cbPressed={ num => alert(num) } >в студёную зимнюю</DoubleButton>,
     document.getElementById('container')
 );

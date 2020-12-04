@@ -3,7 +3,7 @@ import React from 'react';
 function withRainbowFrame(colors) {
     return function(Component) {
         return props => (
-            <div style={{backgroundColor:color}}>
+            <div style={{backgroundColor:colors}}>
                 <Component {...props} />
             </div>
         );
