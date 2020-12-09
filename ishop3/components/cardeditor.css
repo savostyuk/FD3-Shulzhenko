@@ -1,0 +1,8 @@
+span.field-error{
+    color: red;
+    margin-left: 5px;
+}
+
+div.field-editor{
+    padding-bottom: 5px;
+}

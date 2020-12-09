@@ -86,25 +86,25 @@ class CardEditor extends React.Component{
             { this.props.cardMode ===2 && <h3>Редактировать товар</h3>}
             { this.props.cardMode ===3 && <h3>Добавить новый товар</h3>}
             <div><label>ID: {this.props.item.code}</label></div>
-            <div>
+            <div className='field-editor'>
                 <label>Name: </label>
                 <input name='itemName' value={this.state.name} onChange={this.editFieldName}/>
-                {(!this.state.nameIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
+                {(!this.state.nameIsValid)&&<span className="field-error">Пожалуйста, заполните!</span>}
             </div>
-            <div>
+            <div className='field-editor'>
                 <label>Price: </label>
                 <input name='itemPrice' value={this.state.price} onChange={this.editFieldPrice}/>
-                {(!this.state.priceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
+                {(!this.state.priceIsValid)&&<span className="field-error">Пожалуйста, заполните!</span>}
             </div>
-            <div>
+            <div className='field-editor'>
                 <label>URL: </label>
                 <input name='itemUrl' value={this.state.url} onChange={this.editFieldUrl}/>
-                {(!this.state.urlIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
+                {(!this.state.urlIsValid)&&<span className="field-error">Пожалуйста, заполните!</span>}
             </div>
-            <div>
+            <div className='field-editor'>
                 <label>Balance: </label>
                 <input name='itemBalance' value={this.state.balance} onChange={this.editFieldBalance}/>
-                {(!this.state.balanceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
+                {(!this.state.balanceIsValid)&&<span className="field-error">Пожалуйста, заполните!</span>}
             </div>
             <div>
                 {this.props.cardMode ===2 &&  <input type='button' value='Save' onClick={this.saveChanges} disabled={!(this.state.nameIsValid&&this.state.priceIsValid&&this.state.urlIsValid&&this.state.balanceIsValid)}/>}
