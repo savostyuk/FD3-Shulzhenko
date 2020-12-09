@@ -18,7 +18,6 @@ class MobileCompany extends React.PureComponent {
                 im: PropTypes.string.isRequired,
                 otch: PropTypes.string.isRequired,
                 balance: PropTypes.number.isRequired,
-                status: PropTypes.string.isRequired,
             })
         ),
     };
@@ -26,6 +25,7 @@ class MobileCompany extends React.PureComponent {
     state = {
         name: this.props.name,
         clients: this.props.clients,
+        filtered: 0,   //0 начальное состояние+показать всех, 1- показать активных, 2 - показать заблокированных
     };
 
     setName1 = () => {
@@ -36,12 +36,61 @@ class MobileCompany extends React.PureComponent {
         this.setState({name:'MTS'});
     };
 
+    allShow = () =>{
+        this.setState({filtered: 0});
+    }
+
+    activeShow = () =>{
+        this.setState({filtered: 1});
+    }
+
+    blockedShow = () =>{
+        this.setState({filtered: 2});
+    }
+
+    filterClient = (mode) => {
+        if (mode === 0) {
+            return this.state.clients;
+        }
+        if (mode === 1) {
+            return this.state.clients.filter (v => v.balance>=0);
+        }
+        if (mode === 2) {
+            return this.state.clients.filter (v => v.balance<0);
+        }
+
+    }
+
+    componentDidMount() {
+        clientEvents.addListener('EEditClient', this.editedClient);
+        clientEvents.addListener('EDeleteClient', this.deletedClient);
+    }
+
+    componentWillUnmount() {
+        clientEvents.removeListener('EEditClient', this.editedClient);
+        clientEvents.removeListener('EDeleteClient', this.deletedClient);
+    }
+    editedClient = (id) =>{
+
+    }
+
+    deletedClient = (id) =>{
+        var Question = confirm("Вы хотите удалить клиента?");
+        if (Question) {
+            var filterClient = this.state.clients.filter(v =>
+                v.id !== id);
+            this.setState({clients: filterClient})
+        }
+    }
+
 
     render() {
 
         console.log("MobileCompany render");
 
-        var clientsCode=this.state.clients.map( client =>
+        let filteredClient = this.filterClient(this.state.filtered);
+
+        var clientsCode=filteredClient.map( client =>
             <MobileClient key={client.id} info={client}  />
         );
 
