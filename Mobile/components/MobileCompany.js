@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {clientEvents} from './events';
+import {formEvents} from './events';
 
 import MobileClient from './MobileClient';
+import ClientForm from './ClientForm';
 
 import './MobileCompany.css';
 
@@ -26,6 +28,8 @@ class MobileCompany extends React.PureComponent {
         name: this.props.name,
         clients: this.props.clients,
         filtered: 0,   //0 начальное состояние+показать всех, 1- показать активных, 2 - показать заблокированных
+        formMode: 0,  //форма закрыта, 1 - редактировать, 2 - добавить нового
+        selectedClientCode: null,
     };
 
     setName1 = () => {
@@ -64,14 +68,20 @@ class MobileCompany extends React.PureComponent {
     componentDidMount() {
         clientEvents.addListener('EEditClient', this.editedClient);
         clientEvents.addListener('EDeleteClient', this.deletedClient);
+        formEvents.addListener('EAddNewClient', this.saveChanged);
+        formEvents.addListener('ECancelForm', this.cancelChanged);
     }
 
     componentWillUnmount() {
         clientEvents.removeListener('EEditClient', this.editedClient);
         clientEvents.removeListener('EDeleteClient', this.deletedClient);
+        formEvents.removeListener('EAddNewClient', this.saveChanged);
+        formEvents.removeListener('ECancelForm', this.cancelChanged);
     }
-    editedClient = (id) =>{
 
+    editedClient = (id) =>{
+        this.setState({formMode: 1});
+        this.setState({selectedClientCode: id});
     }
 
     deletedClient = (id) =>{
@@ -82,7 +92,16 @@ class MobileCompany extends React.PureComponent {
             this.setState({clients: filterClient})
         }
     }
+    addClient = () =>{
+        this.setState({formMode: 2});
+    }
+    saveChanged = () =>{
 
+    }
+
+    cancelChanged = () =>{
+        this.setState({formMode: 0});
+    }
 
     render() {
 
@@ -93,6 +112,11 @@ class MobileCompany extends React.PureComponent {
         var clientsCode=filteredClient.map( client =>
             <MobileClient key={client.id} info={client}  />
         );
+
+        let selectedClient;
+        if (this.state.formMode===1){
+            selectedClient = this.state.clients.filter (client => client.id===this.state.selectedClientCode);
+        }
 
         return (
             <div className='MobileCompany'>
@@ -119,6 +143,15 @@ class MobileCompany extends React.PureComponent {
                     </tbody>
                 </table>
                 <input type="button" value="Добавить клиента" onClick={this.addClient} />
+                {this.state.formMode===1 &&
+                <ClientForm
+                    key = {selectedClient[0].id}
+                    info = {selectedClient}
+                    formMode = {this.state.formMode}/>
+                }
+                {this.state.formMode===2 &&
+                    <ClientForm formMode={this.state.formMode}/>
+                }
             </div>
         )
             ;
