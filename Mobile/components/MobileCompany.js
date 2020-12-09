@@ -89,15 +89,38 @@ class MobileCompany extends React.PureComponent {
         if (Question) {
             var filterClient = this.state.clients.filter(v =>
                 v.id !== id);
-            this.setState({clients: filterClient})
+            this.setState({clients: filterClient});
         }
     }
     addClient = () =>{
         this.setState({formMode: 2});
     }
-    saveChanged = () =>{
+    saveChanged = (client) =>{
+        if (this.state.formMode===1) {
+            let indexEdit;
+            this.state.clients.forEach((v, i) => {
+                if (v.id===client.id) {
+                    indexEdit=i;
+                }
+            });
+            let editedClients = this.state.clients;
+            editedClients[indexEdit] = client;
+            this.setState({clients: editedClients});
+        }
 
+        if (this.state.formMode===2) {
+            let maxId=0;
+            this.state.clients.forEach(v => {
+                if (v.id>maxId) {
+                    maxId=v.id
+                }
+            })
+            client.id = maxId+1;
+            this.state.clients.push(client);
+        }
+        this.setState({formMode: 0});
     }
+
 
     cancelChanged = () =>{
         this.setState({formMode: 0});

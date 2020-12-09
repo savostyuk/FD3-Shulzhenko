@@ -17,10 +17,6 @@ class MobileClient extends React.PureComponent {
         }),
     };
 
-    state = {
-        info: this.props.info,
-    };
-
     editClient = (EO) =>{
         clientEvents.emit('EEditClient', this.props.info.id);
     }
@@ -32,18 +28,18 @@ class MobileClient extends React.PureComponent {
 
     render() {
 
-        console.log("MobileClient id="+this.state.info.id+" render");
+        console.log("MobileClient id="+this.props.info.id+" render");
 
         let status;
-        if (this.state.info.balance>=0) status = 'active'
+        if (this.props.info.balance>=0) status = 'active'
         else status = 'blocked';
 
         return (
                     <tr className='MobileClientInfo'>
-                        <td>{this.state.info.fam}</td>
-                        <td>{this.state.info.im}</td>
-                        <td>{this.state.info.otch}</td>
-                        <td>{this.state.info.balance}</td>
+                        <td>{this.props.info.fam}</td>
+                        <td>{this.props.info.im}</td>
+                        <td>{this.props.info.otch}</td>
+                        <td>{this.props.info.balance}</td>
                         <td className={"status"+status}>{status}</td>
                         <td>
                             <input type='button' value='Редактировать'  onClick={this.editClient}/>

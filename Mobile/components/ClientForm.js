@@ -39,7 +39,15 @@ class ClientForm extends React.PureComponent {
     };
 
     addNewClient = () =>{
-       formEvents.emit('EAddNewClient') ;
+        let newClient = {};
+        if (this.props.formMode===1){
+            newClient.id = this.props.info[0].id;
+        }
+        newClient.fam = this.newFamRef.value;
+        newClient.im = this.newImRef.value;
+        newClient.otch = this.newOtchRef.value;
+        newClient.balance = Number(this.newBalanceRef.value);
+       formEvents.emit('EAddNewClient', newClient) ;
     }
 
     cancelForm = () =>{
