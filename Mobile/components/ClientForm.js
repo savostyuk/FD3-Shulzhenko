@@ -61,16 +61,20 @@ class ClientForm extends React.PureComponent {
         return <div>
             { this.props.formMode ===1 && <h3>Редактировать данные клиента</h3>}
             { this.props.formMode ===2 && <h3>Добавить нового клиента</h3>}
-            <div><label>Фамилия: </label>
+            <div className='field-form'>
+                <label>Фамилия: </label>
             <input defaultValue={(this.props.formMode===1)?this.props.info[0].fam:""} ref={this.setNewFamRef}/>
             </div>
-            <div><label>Имя: </label>
+            <div className='field-form'>
+                <label>Имя: </label>
                 <input defaultValue={(this.props.formMode===1)?this.props.info[0].im:""} ref={this.setNewImRef}/>
             </div>
-            <div><label>Отчество: </label>
+            <div className='field-form'>
+                <label>Отчество: </label>
                 <input defaultValue={(this.props.formMode===1)?this.props.info[0].otch:""} ref={this.setNewOtchRef}/>
             </div>
-            <div><label>Баланс: </label>
+            <div className='field-form'>
+                <label>Баланс: </label>
                 <input defaultValue={(this.props.formMode===1)?this.props.info[0].balance:""} ref={this.setNewBalanceRef}/>
             </div>
             <input type='button' value='Сохранить' onClick={this.addNewClient}/>
