@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {clientEvents} from './events';
+
 import MobileClient from './MobileClient';
 
 import './MobileCompany.css';
@@ -12,8 +14,11 @@ class MobileCompany extends React.PureComponent {
         clients:PropTypes.arrayOf(
             PropTypes.shape({
                 id: PropTypes.number.isRequired,
-                fio: PropTypes.string.isRequired,
+                fam: PropTypes.string.isRequired,
+                im: PropTypes.string.isRequired,
+                otch: PropTypes.string.isRequired,
                 balance: PropTypes.number.isRequired,
+                status: PropTypes.string.isRequired,
             })
         ),
     };
@@ -24,50 +29,13 @@ class MobileCompany extends React.PureComponent {
     };
 
     setName1 = () => {
-        this.setState({name:'МТС'});
-    };
-
-    setName2 = () => {
         this.setState({name:'Velcom'});
     };
 
-    setBalance = (clientId,newBalance) => {
-        let newClients=[...this.state.clients]; // копия самого массива клиентов
-        newClients.forEach( (c,i) => {
-            if ( c.id==clientId ) {
-                //if ( c.id==clientId && c.balance!=newBalance ) {
-                let newClient={...c}; // копия хэша изменившегося клиента
-                newClient.balance=newBalance;
-                newClients[i]=newClient;
-            }
-        } );
-        this.setState({clients:newClients});
+    setName2 = () => {
+        this.setState({name:'MTS'});
     };
 
-    /*
-    setBalance = (clientId,newBalance) => {
-      let changed=false;
-      let newClients=[...this.state.clients]; // копия самого массива клиентов
-      newClients.forEach( (c,i) => {
-        if ( c.id==clientId && c.balance!=newBalance ) {
-          let newClient={...c}; // копия хэша изменившегося клиента
-          newClient.balance=newBalance;
-          newClients[i]=newClient;
-          changed=true;
-        }
-      } );
-      if ( changed )
-        this.setState({clients:newClients});
-    };
-    */
-
-    setBalance1 = () => {
-        this.setBalance(105,230);
-    };
-
-    setBalance2 = () => {
-        this.setBalance(105,250);
-    };
 
     render() {
 
@@ -79,14 +47,29 @@ class MobileCompany extends React.PureComponent {
 
         return (
             <div className='MobileCompany'>
-                <input type="button" value="=МТС" onClick={this.setName1} />
-                <input type="button" value="=Velcom" onClick={this.setName2} />
+                <input type="button" value="Velcom" onClick={this.setName1} />
+                <input type="button" value="MTS" onClick={this.setName2} />
                 <div className='MobileCompanyName'>Компания &laquo;{this.state.name}&raquo;</div>
-                <div className='MobileCompanyClients'>
+                <hr />
+                    <input type="button" value="Все" onClick={this.allShow} />
+                    <input type="button" value="Активные" onClick={this.activeShow} />
+                    <input type="button" value="Заблокированные" onClick={this.blockedShow} />
+                <hr />
+                <table className='MobileCompanyClients'>
+                    <tbody>
+                    <tr className="Headings">
+                        <td>Фамилия</td>
+                        <td>Имя</td>
+                        <td>Отчество</td>
+                        <td>Баланс</td>
+                        <td>Статус</td>
+                        <td>Редактировать</td>
+                        <td>Удалить</td>
+                    </tr>
                     {clientsCode}
-                </div>
-                <input type="button" value="Сидоров=230" onClick={this.setBalance1} />
-                <input type="button" value="Сидоров=250" onClick={this.setBalance2} />
+                    </tbody>
+                </table>
+                <input type="button" value="Добавить клиента" onClick={this.addClient} />
             </div>
         )
             ;

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {clientEvents} from './events';
+
 import './MobileClient.css';
 
 class MobileClient extends React.PureComponent {
@@ -8,7 +10,9 @@ class MobileClient extends React.PureComponent {
     static propTypes = {
         info:PropTypes.shape({
             id: PropTypes.number.isRequired,
-            fio: PropTypes.string.isRequired,
+            fam: PropTypes.string.isRequired,
+            im: PropTypes.string.isRequired,
+            otch: PropTypes.string.isRequired,
             balance: PropTypes.number.isRequired,
         }),
     };
@@ -17,20 +21,38 @@ class MobileClient extends React.PureComponent {
         info: this.props.info,
     };
 
-    componentWillReceiveProps = (newProps) => {
-        console.log("MobileClient id="+this.props.info.id+" componentWillReceiveProps");
-        this.setState({info:newProps.info});
-    };
+    editClient = (EO) =>{
+        clientEvents.emit('EEditClient', this.props.info.id);
+    }
+
+    deleteClient = (EO) =>{
+        clientEvents.emit('EDeleteClient', this.props.info.id);
+    }
+
 
     render() {
 
         console.log("MobileClient id="+this.state.info.id+" render");
 
+        let status;
+        if (this.state.info.balance>=0) status = 'active'
+        else status = 'blocked';
+
         return (
-            <div className='MobileClient'>
-                <span className='MobileClientBalance'>{this.state.info.balance}</span>
-                <span className='MobileClientFIO'>{this.state.info.fio}</span>
-            </div>
+                    <tr className='MobileClientInfo'>
+                        <td>{this.state.info.fam}</td>
+                        <td>{this.state.info.im}</td>
+                        <td>{this.state.info.otch}</td>
+                        <td>{this.state.info.balance}</td>
+                        <td className={"status"+status}>{status}</td>
+                        <td>
+                            <input type='button' value='Редактировать'  onClick={this.editClient}/>
+                        </td>
+                        <td>
+                            <input type='button' value='Удалить'  onClick={this.deleteClient}/>
+                        </td>
+                    </tr>
+
         );
 
     }

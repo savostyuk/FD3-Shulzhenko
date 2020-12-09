@@ -7,10 +7,10 @@ import MobileCompany from './components/MobileCompany';
 
 let companyName='Velcom';
 let clientsArr=[
-    {id:101, fio:"Иванов И.И.", balance:200},
-    {id:105, fio:"Сидоров С.С.", balance:250},
-    {id:110, fio:"Петров П.П.", balance:180},
-    {id:120, fio:"Григорьев Г.Г.", balance:220},
+    {id:101, fam:"Иванов", im:"Иван", otch:"Иванович", balance:200},
+    {id:105, fam:"Сидоров", im:"Сидор", otch:"Сидорович", balance:250},
+    {id:110, fam:"Петров", im:"Петр", otch:"Петрович", balance:180},
+    {id:120, fam:"Григорьев", im:"Григорий", otch:"Григорьевич", balance:-220},
 ];
 
 ReactDOM.render(

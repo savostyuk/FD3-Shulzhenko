@@ -1,17 +1,14 @@
-div.MobileClient
-{
-    padding: 2px 0;
+tr.MobileClientInfo{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+tr.MobileClientInfo td{
+    padding: 5px 0;
 }
 
-span.MobileClientBalance
-{
-    float: right;
-    width: 30px;
-    font-weight: bold;
-    text-align: right;
+td.statusactive{
+    background-color: green;
 }
-
-span.MobileClientFIO
-{
-    margin-right: 30px;
+td.statusblocked{
+    background-color: red;
 }
