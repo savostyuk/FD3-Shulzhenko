@@ -32,14 +32,20 @@ class Shop extends React.Component {
 //callback для cardeditor
     cbSave = (newItem) => {
      if (this.state.cardMode ===2){
-         var newGoods = this.state.goods.map(item =>
-             item.code = newItem.code?newItem:item);
-         this.setState({cardMode: 0, goods: newGoods, btnsDisabledDelete: false, blockChange: false })
+         let indexEdit;
+         this.state.goods.forEach((v, i) => {
+             if (v.id===newItem.id) {
+                 indexEdit=i;
+             }
+         });
+         let editedGoods = this.state.goods;
+         editedGoods[indexEdit] = newItem;
+         this.setState({clients: editedGoods});
      }
         if (this.state.cardMode ===3) {
             this.state.goods.push(newItem);
-            this.setState({cardMode: 0, btnsDisabledDelete: false, blockChange: false})
         }
+        this.setState({cardMode: 0,btnsDisabledDelete: false, blockChange: false});
     }
 
     //при нажатии кнопки Cancel

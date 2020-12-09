@@ -18,13 +18,11 @@ class CardEditor extends React.Component{
     }
 
     state={
-        item: {
             code: this.props.item.code,
             name: this.props.item.name,
             price: this.props.item.price,
             url: this.props.item.url,
             balance: this.props.item.balance,
-        },
         nameIsValid: this.props.nameIsValid,
         priceIsValid: this.props.priceIsValid,
         urlIsValid: this.props.urlIsValid,
@@ -33,7 +31,7 @@ class CardEditor extends React.Component{
 
     editFieldName = (EO) => {
         this.props.cbOnChange();
-        this.setState({item: {name: EO.target.value}});
+        this.setState({name: EO.target.value});
         if(!(EO.target.value)) {
             this.setState({nameIsValid: false});
         } else {
@@ -42,7 +40,7 @@ class CardEditor extends React.Component{
     }
     editFieldPrice = (EO) => {
         this.props.cbOnChange();
-        this.setState({item: {price: EO.target.value}});
+        this.setState({price: EO.target.value});
         if(!(EO.target.value)) {
             this.setState({priceIsValid: false});
         } else {
@@ -51,7 +49,7 @@ class CardEditor extends React.Component{
     }
     editFieldUrl = (EO) => {
         this.props.cbOnChange();
-        this.setState({item: {url: EO.target.value}});
+        this.setState({url: EO.target.value});
         if(!(EO.target.value)) {
             this.setState({urlIsValid: false});
         } else {
@@ -60,7 +58,7 @@ class CardEditor extends React.Component{
     }
     editFieldBalance = (EO) => {
         this.props.cbOnChange();
-        this.setState({item: {balance: EO.target.value}});
+        this.setState({balance: EO.target.value});
         if(!(EO.target.value)) {
             this.setState({balanceIsValid: false});
         } else {
@@ -70,11 +68,11 @@ class CardEditor extends React.Component{
 
     saveChanges = () =>{
         let newItem = {};
-        newItem.code = this.state.item.code;
-        newItem.name = this.state.item.name;
-        newItem.price = this.state.item.price;
-        newItem.url = this.state.item.url;
-        newItem.balance = this.state.item.balance;
+        newItem.code = this.state.code;
+        newItem.name = this.state.name;
+        newItem.price = this.state.price;
+        newItem.url = this.state.url;
+        newItem.balance = this.state.balance;
         console.log(newItem);
         this.props.cbSaveChanges (newItem);
     }
@@ -90,22 +88,22 @@ class CardEditor extends React.Component{
             <div><label>ID: {this.props.item.code}</label></div>
             <div>
                 <label>Name: </label>
-                <input name='itemName' defaultValue={this.state.item.name} onChange={this.editFieldName}/>
+                <input name='itemName' value={this.state.name} onChange={this.editFieldName}/>
                 {(!this.state.nameIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>Price: </label>
-                <input name='itemPrice' defaultValue={this.state.item.price} onChange={this.editFieldPrice}/>
+                <input name='itemPrice' value={this.state.price} onChange={this.editFieldPrice}/>
                 {(!this.state.priceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>URL: </label>
-                <input name='itemUrl' defaultValue={this.state.item.url} onChange={this.editFieldUrl}/>
+                <input name='itemUrl' value={this.state.url} onChange={this.editFieldUrl}/>
                 {(!this.state.urlIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
                 <label>Balance: </label>
-                <input name='itemBalance' defaultValue={this.state.item.balance} onChange={this.editFieldBalance}/>
+                <input name='itemBalance' value={this.state.balance} onChange={this.editFieldBalance}/>
                 {(!this.state.balanceIsValid)&&<span className="errorField">Пожалуйста, заполните</span>}
             </div>
             <div>
