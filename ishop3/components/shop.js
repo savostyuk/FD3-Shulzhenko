@@ -34,16 +34,17 @@ class Shop extends React.Component {
      if (this.state.cardMode ===2){
          let indexEdit;
          this.state.goods.forEach((v, i) => {
-             if (v.id===newItem.id) {
+             if (v.code===newItem.code) {
                  indexEdit=i;
              }
          });
          let editedGoods = this.state.goods;
          editedGoods[indexEdit] = newItem;
-         this.setState({clients: editedGoods});
+         this.setState({goods: editedGoods});
      }
         if (this.state.cardMode ===3) {
             this.state.goods.push(newItem);
+            this.setState({idNext: newItem.code+1}); //обновляем код для будущего элемента
         }
         this.setState({cardMode: 0,btnsDisabledDelete: false, blockChange: false});
     }

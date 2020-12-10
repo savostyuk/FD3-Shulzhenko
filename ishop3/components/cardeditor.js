@@ -73,7 +73,6 @@ class CardEditor extends React.Component{
         newItem.price = this.state.price;
         newItem.url = this.state.url;
         newItem.balance = this.state.balance;
-        console.log(newItem);
         this.props.cbSaveChanges (newItem);
     }
 
