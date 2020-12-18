@@ -42,10 +42,10 @@ class MobileClient extends React.PureComponent {
                         <td>{this.props.info.balance}</td>
                         <td className={"status"+status}>{status}</td>
                         <td>
-                            <input type='button' value='Редактировать'  onClick={this.editClient}/>
+                            <input type='button' className='buttonEdit' value='Редактировать'  onClick={this.editClient}/>
                         </td>
                         <td>
-                            <input type='button' value='Удалить'  onClick={this.deleteClient}/>
+                            <input type='button' className='buttonDelete' value='Удалить'  onClick={this.deleteClient}/>
                         </td>
                     </tr>
 

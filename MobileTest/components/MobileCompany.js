@@ -152,7 +152,7 @@ class MobileCompany extends React.PureComponent {
                     {clientsCode}
                     </tbody>
                 </table>
-                <input type="button" value="Добавить клиента" onClick={this.addClient} />
+                <input type="button" className="addClient" value="Добавить клиента" onClick={this.addClient} />
                 {this.state.formMode===1 &&
                 <ClientForm
                     key = {selectedClient[0].id}
