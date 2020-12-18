@@ -1,0 +1,14 @@
+tr.MobileClientInfo{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+tr.MobileClientInfo td{
+    padding: 5px 0;
+}
+
+td.statusactive{
+    background-color: green;
+}
+td.statusblocked{
+    background-color: red;
+}
