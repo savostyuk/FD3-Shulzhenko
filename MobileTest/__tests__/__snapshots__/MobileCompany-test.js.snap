@@ -75,6 +75,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -82,6 +83,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -110,6 +112,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -117,6 +120,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -145,6 +149,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -152,6 +157,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -180,6 +186,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -187,6 +194,7 @@ exports[`Работа кнопки Активные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -196,6 +204,7 @@ exports[`Работа кнопки Активные 1`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -278,6 +287,7 @@ exports[`Работа кнопки Активные 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -285,6 +295,7 @@ exports[`Работа кнопки Активные 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -313,6 +324,7 @@ exports[`Работа кнопки Активные 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -320,6 +332,7 @@ exports[`Работа кнопки Активные 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -348,6 +361,7 @@ exports[`Работа кнопки Активные 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -355,6 +369,7 @@ exports[`Работа кнопки Активные 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -364,6 +379,7 @@ exports[`Работа кнопки Активные 2`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -446,6 +462,7 @@ exports[`Работа кнопки Активные 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -453,6 +470,7 @@ exports[`Работа кнопки Активные 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -481,6 +499,7 @@ exports[`Работа кнопки Активные 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -488,6 +507,7 @@ exports[`Работа кнопки Активные 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -516,6 +536,7 @@ exports[`Работа кнопки Активные 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -523,6 +544,7 @@ exports[`Работа кнопки Активные 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -532,6 +554,7 @@ exports[`Работа кнопки Активные 3`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -614,6 +637,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -621,6 +645,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -649,6 +674,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -656,6 +682,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -684,6 +711,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -691,6 +719,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -719,6 +748,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -726,6 +756,7 @@ exports[`Работа кнопки Все 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -735,6 +766,7 @@ exports[`Работа кнопки Все 1`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -817,6 +849,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -824,6 +857,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -852,6 +886,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -859,6 +894,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -887,6 +923,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -894,6 +931,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -922,6 +960,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -929,6 +968,7 @@ exports[`Работа кнопки Все 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -938,6 +978,7 @@ exports[`Работа кнопки Все 2`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -1020,6 +1061,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1027,6 +1069,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1055,6 +1098,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1062,6 +1106,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1090,6 +1135,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1097,6 +1143,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1125,6 +1172,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1132,6 +1180,7 @@ exports[`Работа кнопки Все 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1141,10 +1190,490 @@ exports[`Работа кнопки Все 3`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
   />
+</div>
+`;
+
+exports[`Работа кнопки Добавить клиента 1`] = `
+<div
+  className="MobileCompany"
+>
+  <hr />
+  <input
+    className="showAll"
+    onClick={[Function]}
+    type="button"
+    value="Все"
+  />
+  <input
+    className="showActive"
+    onClick={[Function]}
+    type="button"
+    value="Активные"
+  />
+  <input
+    className="showBlocked"
+    onClick={[Function]}
+    type="button"
+    value="Заблокированные"
+  />
+  <hr />
+  <table
+    className="MobileCompanyClients"
+  >
+    <tbody>
+      <tr
+        className="Headings"
+      >
+        <td>
+          Фамилия
+        </td>
+        <td>
+          Имя
+        </td>
+        <td>
+          Отчество
+        </td>
+        <td>
+          Баланс
+        </td>
+        <td>
+          Статус
+        </td>
+        <td>
+          Редактировать
+        </td>
+        <td>
+          Удалить
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Иванов
+        </td>
+        <td>
+          Иван
+        </td>
+        <td>
+          Иванович
+        </td>
+        <td>
+          200
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Сидоров
+        </td>
+        <td>
+          Сидор
+        </td>
+        <td>
+          Сидорович
+        </td>
+        <td>
+          250
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Петров
+        </td>
+        <td>
+          Петр
+        </td>
+        <td>
+          Петрович
+        </td>
+        <td>
+          180
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Григорьев
+        </td>
+        <td>
+          Григорий
+        </td>
+        <td>
+          Григорьевич
+        </td>
+        <td>
+          -220
+        </td>
+        <td
+          className="statusblocked"
+        >
+          blocked
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input
+    className="addClient"
+    onClick={[Function]}
+    type="button"
+    value="Добавить клиента"
+  />
+</div>
+`;
+
+exports[`Работа кнопки Добавить клиента 2`] = `
+<div
+  className="MobileCompany"
+>
+  <hr />
+  <input
+    className="showAll"
+    onClick={[Function]}
+    type="button"
+    value="Все"
+  />
+  <input
+    className="showActive"
+    onClick={[Function]}
+    type="button"
+    value="Активные"
+  />
+  <input
+    className="showBlocked"
+    onClick={[Function]}
+    type="button"
+    value="Заблокированные"
+  />
+  <hr />
+  <table
+    className="MobileCompanyClients"
+  >
+    <tbody>
+      <tr
+        className="Headings"
+      >
+        <td>
+          Фамилия
+        </td>
+        <td>
+          Имя
+        </td>
+        <td>
+          Отчество
+        </td>
+        <td>
+          Баланс
+        </td>
+        <td>
+          Статус
+        </td>
+        <td>
+          Редактировать
+        </td>
+        <td>
+          Удалить
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Иванов
+        </td>
+        <td>
+          Иван
+        </td>
+        <td>
+          Иванович
+        </td>
+        <td>
+          200
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Сидоров
+        </td>
+        <td>
+          Сидор
+        </td>
+        <td>
+          Сидорович
+        </td>
+        <td>
+          250
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Петров
+        </td>
+        <td>
+          Петр
+        </td>
+        <td>
+          Петрович
+        </td>
+        <td>
+          180
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Григорьев
+        </td>
+        <td>
+          Григорий
+        </td>
+        <td>
+          Григорьевич
+        </td>
+        <td>
+          -220
+        </td>
+        <td
+          className="statusblocked"
+        >
+          blocked
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input
+    className="addClient"
+    onClick={[Function]}
+    type="button"
+    value="Добавить клиента"
+  />
+  <div>
+    <h3>
+      Добавить нового клиента
+    </h3>
+    <div
+      className="field-form"
+    >
+      <label>
+        Фамилия: 
+      </label>
+      <input
+        defaultValue=""
+      />
+    </div>
+    <div
+      className="field-form"
+    >
+      <label>
+        Имя: 
+      </label>
+      <input
+        defaultValue=""
+      />
+    </div>
+    <div
+      className="field-form"
+    >
+      <label>
+        Отчество: 
+      </label>
+      <input
+        defaultValue=""
+      />
+    </div>
+    <div
+      className="field-form"
+    >
+      <label>
+        Баланс: 
+      </label>
+      <input
+        defaultValue=""
+      />
+    </div>
+    <input
+      onClick={[Function]}
+      type="button"
+      value="Сохранить"
+    />
+    <input
+      onClick={[Function]}
+      type="button"
+      value="Отмена"
+    />
+  </div>
 </div>
 `;
 
@@ -1223,6 +1752,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1230,6 +1760,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1258,6 +1789,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1265,6 +1797,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1293,6 +1826,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1300,6 +1834,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1328,6 +1863,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1335,6 +1871,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1344,6 +1881,7 @@ exports[`Работа кнопки Заблокированные 1`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -1426,6 +1964,7 @@ exports[`Работа кнопки Заблокированные 2`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1433,6 +1972,7 @@ exports[`Работа кнопки Заблокированные 2`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1442,6 +1982,7 @@ exports[`Работа кнопки Заблокированные 2`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
@@ -1524,6 +2065,7 @@ exports[`Работа кнопки Заблокированные 3`] = `
         </td>
         <td>
           <input
+            className="buttonEdit"
             onClick={[Function]}
             type="button"
             value="Редактировать"
@@ -1531,6 +2073,7 @@ exports[`Работа кнопки Заблокированные 3`] = `
         </td>
         <td>
           <input
+            className="buttonDelete"
             onClick={[Function]}
             type="button"
             value="Удалить"
@@ -1540,6 +2083,421 @@ exports[`Работа кнопки Заблокированные 3`] = `
     </tbody>
   </table>
   <input
+    className="addClient"
+    onClick={[Function]}
+    type="button"
+    value="Добавить клиента"
+  />
+</div>
+`;
+
+exports[`Работа кнопки Удалить 1`] = `
+<div
+  className="MobileCompany"
+>
+  <hr />
+  <input
+    className="showAll"
+    onClick={[Function]}
+    type="button"
+    value="Все"
+  />
+  <input
+    className="showActive"
+    onClick={[Function]}
+    type="button"
+    value="Активные"
+  />
+  <input
+    className="showBlocked"
+    onClick={[Function]}
+    type="button"
+    value="Заблокированные"
+  />
+  <hr />
+  <table
+    className="MobileCompanyClients"
+  >
+    <tbody>
+      <tr
+        className="Headings"
+      >
+        <td>
+          Фамилия
+        </td>
+        <td>
+          Имя
+        </td>
+        <td>
+          Отчество
+        </td>
+        <td>
+          Баланс
+        </td>
+        <td>
+          Статус
+        </td>
+        <td>
+          Редактировать
+        </td>
+        <td>
+          Удалить
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Иванов
+        </td>
+        <td>
+          Иван
+        </td>
+        <td>
+          Иванович
+        </td>
+        <td>
+          200
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Сидоров
+        </td>
+        <td>
+          Сидор
+        </td>
+        <td>
+          Сидорович
+        </td>
+        <td>
+          250
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Петров
+        </td>
+        <td>
+          Петр
+        </td>
+        <td>
+          Петрович
+        </td>
+        <td>
+          180
+        </td>
+        <td
+          className="statusactive"
+        >
+          active
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Григорьев
+        </td>
+        <td>
+          Григорий
+        </td>
+        <td>
+          Григорьевич
+        </td>
+        <td>
+          -220
+        </td>
+        <td
+          className="statusblocked"
+        >
+          blocked
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input
+    className="addClient"
+    onClick={[Function]}
+    type="button"
+    value="Добавить клиента"
+  />
+</div>
+`;
+
+exports[`Работа кнопки Удалить 2`] = `
+<div
+  className="MobileCompany"
+>
+  <hr />
+  <input
+    className="showAll"
+    onClick={[Function]}
+    type="button"
+    value="Все"
+  />
+  <input
+    className="showActive"
+    onClick={[Function]}
+    type="button"
+    value="Активные"
+  />
+  <input
+    className="showBlocked"
+    onClick={[Function]}
+    type="button"
+    value="Заблокированные"
+  />
+  <hr />
+  <table
+    className="MobileCompanyClients"
+  >
+    <tbody>
+      <tr
+        className="Headings"
+      >
+        <td>
+          Фамилия
+        </td>
+        <td>
+          Имя
+        </td>
+        <td>
+          Отчество
+        </td>
+        <td>
+          Баланс
+        </td>
+        <td>
+          Статус
+        </td>
+        <td>
+          Редактировать
+        </td>
+        <td>
+          Удалить
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Григорьев
+        </td>
+        <td>
+          Григорий
+        </td>
+        <td>
+          Григорьевич
+        </td>
+        <td>
+          -220
+        </td>
+        <td
+          className="statusblocked"
+        >
+          blocked
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input
+    className="addClient"
+    onClick={[Function]}
+    type="button"
+    value="Добавить клиента"
+  />
+</div>
+`;
+
+exports[`Работа кнопки Удалить 3`] = `
+<div
+  className="MobileCompany"
+>
+  <hr />
+  <input
+    className="showAll"
+    onClick={[Function]}
+    type="button"
+    value="Все"
+  />
+  <input
+    className="showActive"
+    onClick={[Function]}
+    type="button"
+    value="Активные"
+  />
+  <input
+    className="showBlocked"
+    onClick={[Function]}
+    type="button"
+    value="Заблокированные"
+  />
+  <hr />
+  <table
+    className="MobileCompanyClients"
+  >
+    <tbody>
+      <tr
+        className="Headings"
+      >
+        <td>
+          Фамилия
+        </td>
+        <td>
+          Имя
+        </td>
+        <td>
+          Отчество
+        </td>
+        <td>
+          Баланс
+        </td>
+        <td>
+          Статус
+        </td>
+        <td>
+          Редактировать
+        </td>
+        <td>
+          Удалить
+        </td>
+      </tr>
+      <tr
+        className="MobileClientInfo"
+      >
+        <td>
+          Григорьев
+        </td>
+        <td>
+          Григорий
+        </td>
+        <td>
+          Григорьевич
+        </td>
+        <td>
+          -220
+        </td>
+        <td
+          className="statusblocked"
+        >
+          blocked
+        </td>
+        <td>
+          <input
+            className="buttonEdit"
+            onClick={[Function]}
+            type="button"
+            value="Редактировать"
+          />
+        </td>
+        <td>
+          <input
+            className="buttonDelete"
+            onClick={[Function]}
+            type="button"
+            value="Удалить"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input
+    className="addClient"
     onClick={[Function]}
     type="button"
     value="Добавить клиента"
