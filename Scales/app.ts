@@ -6,26 +6,24 @@ class Scales {
         this.products = [];
     }
 
-    add(product: { name: string, scale: number }): void {
-        if (product instanceof Product) {
+    add(product: Product): void {
             this.products.push(product);
-        }
     }
 
-    getSumScale(): void {
-        let result = 0;
-        for (let i = 0; i < this.products.length; i++) {
+    getSumScale(): number {
+        let result:number = 0;
+        for (let i:number = 0; i < this.products.length; i++) {
             result = result + this.products[i].getScale();
         }
-        console.log(result);
+        return result;
     }
 
-    getNameList(): void {
-        let result = [];
-        for (let i = 0; i < this.products.length; i++) {
+    getNameList(): Array<string> {
+        let result:Array<string> = [];
+        for (let i:number = 0; i < this.products.length; i++) {
             result.push(this.products[i].getName());
         }
-        console.log(result);
+        return result;
     }
 }
 
@@ -99,5 +97,5 @@ scales1.add(apple2);
 scales1.add(apple3);
 scales1.add(tomato1);
 scales1.add(tomato2);
-scales1.getNameList();
-scales1.getSumScale();
+console.log(scales1.getNameList());
+console.log(scales1.getSumScale());
