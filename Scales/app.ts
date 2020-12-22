@@ -96,6 +96,8 @@ let tomato2: Tomato = new Tomato('pink tomato', 75);
 
 scales1.add(apple1);
 scales1.add(apple2);
+scales1.add(apple3);
 scales1.add(tomato1);
+scales1.add(tomato2);
 scales1.getNameList();
 scales1.getSumScale();
