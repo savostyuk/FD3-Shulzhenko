@@ -1,31 +1,37 @@
 class Scales {
 
-    products: Array<Product>;
+    products: Array<IScalable>;
 
     constructor() {
         this.products = [];
     }
 
-    add(product: Product): void {
-            this.products.push(product);
+    add(product:IScalable): void {
+        this.products.push(product);
     }
 
     getSumScale(): number {
-        let result:number = 0;
-        for (let i:number = 0; i < this.products.length; i++) {
+        let result: number = 0;
+        for (let i: number = 0; i < this.products.length; i++) {
             result = result + this.products[i].getScale();
         }
         return result;
     }
 
     getNameList(): Array<string> {
-        let result:Array<string> = [];
-        for (let i:number = 0; i < this.products.length; i++) {
+        let result: Array<string> = [];
+        for (let i: number = 0; i < this.products.length; i++) {
             result.push(this.products[i].getName());
         }
         return result;
     }
 }
+
+interface IScalable {
+    getName(): string;
+    getScale(): number;
+}
+
 
 class Product {
     name: string;
@@ -34,6 +40,18 @@ class Product {
     constructor() {
         this.name = '';
         this.scale = 0;
+    }
+
+}
+
+class Apple extends Product implements IScalable {
+    name: string;
+    scale: number;
+
+    constructor(_name: string, _scale: number) {
+        super();
+        this.name = _name;
+        this.scale = _scale;
     }
 
     getName(): string {
@@ -45,7 +63,7 @@ class Product {
     }
 }
 
-class Apple extends Product {
+class Tomato extends Product implements IScalable {
     name: string;
     scale: number;
 
@@ -56,30 +74,11 @@ class Apple extends Product {
     }
 
     getName(): string {
-        return super.getName();
+        return this.name;
     }
 
     getScale(): number {
-        return super.getScale();
-    }
-}
-
-class Tomato extends Product {
-    name: string;
-    scale: number;
-
-    constructor(_name: string, _scale: number) {
-        super();
-        this.name = _name;
-        this.scale = _scale;
-    }
-
-    getName(): string {
-        return super.getName();
-    }
-
-    getScale(): number {
-        return super.getScale();
+        return this.scale;
     }
 }
 
