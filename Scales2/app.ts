@@ -33,23 +33,11 @@ interface IScalable {
 }
 
 
-class Product {
-    name: string;
-    scale: number;
-
-    constructor() {
-        this.name = '';
-        this.scale = 0;
-    }
-
-}
-
-class Apple extends Product implements IScalable {
+class Apple implements IScalable {
     name: string;
     scale: number;
 
     constructor(_name: string, _scale: number) {
-        super();
         this.name = _name;
         this.scale = _scale;
     }
@@ -63,12 +51,11 @@ class Apple extends Product implements IScalable {
     }
 }
 
-class Tomato extends Product implements IScalable {
+class Tomato implements IScalable {
     name: string;
     scale: number;
 
     constructor(_name: string, _scale: number) {
-        super();
         this.name = _name;
         this.scale = _scale;
     }
